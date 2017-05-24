@@ -3,7 +3,7 @@
 	var aDayName= presentTime.getDay();
 	var month = presentTime.getMonth();
 	var year = presentTime.getFullYear();
-
+	console.log(aDayDate);
 	var days = new Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
 	var months= new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
 	var presentMonth= months[month];
@@ -32,14 +32,15 @@
 	
 	function fullfillForm(){
 		document.getElementById("destinationTown").innerHTML="<h1> "+localStorage.destination+" </h1>";
-		
-		//var day1= presentTime.getDay();
-		//var month1=presentTime.getMonth()+1;
-		//var year1=year;
+
+		var day1= presentTime.getDate();
+		console.log(day1);
+		var month1=presentTime.getMonth()+1;
+		var year1=year;
 		//TESTS:
-		var day1=27;
-		var month1=2;
-		var year1=2016;
+		//var day1=27;
+		//var month1=2;
+		//var year1=2016;
 		
 		
 		var zeroDay= "";
