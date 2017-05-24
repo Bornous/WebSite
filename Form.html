@@ -1,0 +1,65 @@
+﻿ <!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>All you need</title>
+		<meta charset="utf8">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="myjavascript.js"></script>
+		
+	</head>
+	<body  onload="whatTimeIsIt(); fullfillForm()" class="w3-gray" >
+
+		<div class="w3-container w3-padding-small w3-gray">
+		  <div class="w3-right" >
+			<div id="top_clock">13:35</div>
+		  </div>
+		</div>
+
+		<div class="w3-bar w3-orange w3-xlarge">
+		  <a class="w3-bar-item w3-button" href="javascript: linkToHomePage()"><i class="fa fa-bars"></i></a>
+		  <span  class="w3-bar-item">Choose your trip</span>
+		  <a class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-gray" href="javascript: linkToHomePage()"><i class="fa fa-search"></i></a>
+		</div>
+
+		<div class="w3-bar w3-row">
+		  <div onclick="linkToBrasil()" class=" w3-button w3-orange w3-quarter" >Brasil</div>
+		  <div onclick="javascript:void(0)" class="w3-purple w3-button w3-hover-orange w3-quarter" >China</div>
+		  <div onclick="javascript:void(0)" class="w3-khaki w3-button w3-hover-orange w3-quarter" >Australia</div>
+		  <div onclick="javascript:void(0)" class="w3-lime w3-button w3-hover-orange w3-quarter" >Egypt</div>
+		</div>
+		
+		<div class="w3-card w3-container w3-margin-top" >
+			<div id="destinationTown" >Tu powinno być wybrane miasto</div>
+			
+			 <form action="">
+				  First name:<br>
+				  <input type="text" name="firstname" value="Wpisz swoje imię..."><br>
+				  Last name:<br>
+				  <input type="text" name="lastname" value="Wpisz swoje nazwisko..."><br>
+				  Your e-mail:<br>
+				  <input type="email" name="email" value="przykladowy@wp.pl">
+				  <br><br>
+				  Choose when do you want to go:<br>
+				  <select name="D1"  id="Date1">
+						
+				  </select><br>
+				  And also choose when do you want to return (min. period is one week):<br>
+				  <select name="D2" id="Date2">
+					
+				  </select>
+				 <br><br>
+				  <input type="submit" value="Submit">
+			</form> 
+				
+		</div>
+		
+		
+		
+	</body>
+
+
+
+</html>
