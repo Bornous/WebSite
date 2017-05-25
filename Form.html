@@ -3,25 +3,27 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>All you need</title>
-		<meta charset="utf8">
+		<meta charset="utf-8">
+		<link href="arkuszStyli.css" rel="stylesheet"  type="text/css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="myjavascript.js"></script>
 		
 	</head>
-	<body  onload="whatTimeIsIt(); fullfillForm()" class="w3-gray" >
+	<body  onload="whatTimeIsIt(); fullfillForm()" class="w3-gray opa7" >
 
-		<div class="w3-container w3-padding-small w3-gray">
+		<div class="w3-container w3-padding-small w3-gray opa7">
 		  <div class="w3-right" >
 			<div id="top_clock">13:35</div>
 		  </div>
 		</div>
 
 		<div class="w3-bar w3-orange w3-xlarge">
-		  <a class="w3-bar-item w3-button" href="javascript: linkToHomePage()"><i class="fa fa-bars"></i></a>
+		  <a class="w3-bar-item w3-button" href="javascript: linkToHomePage()"><i class="fa fa-plane"></i></a>
 		  <span  class="w3-bar-item">Choose your trip</span>
-		  <a class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-gray" href="javascript: linkToHomePage()"><i class="fa fa-search"></i></a>
+		  <a class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-gray" href="javascript: linkToHomePage()"><i class="fa fa-home"></i></a>
 		</div>
 
 		<div class="w3-bar w3-row">
@@ -31,31 +33,43 @@
 		  <div onclick="javascript:void(0)" class="w3-lime w3-button w3-hover-orange w3-quarter" >Egypt</div>
 		</div>
 		
-		<div class="w3-card w3-container w3-margin-top" >
+		<div class="w3-card w3-container w3-margin-top w3-white image  " >
 			<div id="destinationTown" >Tu powinno być wybrane miasto</div>
 			
-			 <form action="">
+			<div class="w3-half">
+			
+			 <form action="Form.html" method="POST" id="clientForm" >
 				  First name:<br>
-				  <input type="text" name="firstname" value="Wpisz swoje imię..."><br>
+				  <input type="text" name="firstname" value="Wpisz swoje imię..." onfocus="this.value=''">
+				  <br>
 				  Last name:<br>
-				  <input type="text" name="lastname" value="Wpisz swoje nazwisko..."><br>
+				  <input type="text" name="lastname" value="Wpisz swoje nazwisko..." onfocus="this.value=''"><br>
 				  Your e-mail:<br>
-				  <input type="email" name="email" value="przykladowy@wp.pl">
+				  <input type="email" name="email" value="przykladowy@wp.pl" onfocus="this.value=''">
 				  <br><br>
 				  Choose when do you want to go:<br>
 				  <select name="D1"  id="Date1">
 						
 				  </select><br>
-				  And also choose when do you want to return (min. period is one week):<br>
+				  And also choose when do you want to return (a min. period is one week):<br>
 				  <select name="D2" id="Date2">
 					
 				  </select>
 				 <br><br>
-				  <input type="submit" value="Submit">
+				 <input type="reset" >
 			</form> 
-				
+			 <button class="w3-button w3-green"  onclick="MYsubmit()"><div id="suButton">Submit</div></button>
+			<div id="progres" ></div>
+			
+			</div>
+			<div class="w3-half" id="errorLog"></div>
+			
 		</div>
 		
+		<div class="w3-container image w3-margin-top w3-orange">
+		  <h5>Autor</h5>
+		  <p>&#x24B8 Paweł Jan Grabarczuk</p>
+		</div> 
 		
 		
 	</body>

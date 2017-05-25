@@ -3,26 +3,28 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>All you need</title>
-		<script src="myjavascript.js"></script>
+		
 		<meta charset="UTF-8">
+		<link href="arkuszStyli.css" rel="stylesheet"  type="text/css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="myjavascript.js"></script>
 		
 	</head>
-	<body  onload="whatTimeIsIt()" class="w3-gray" >
+	<body  onload="whatTimeIsIt()" >
 
-		<div class="w3-container w3-padding-small w3-gray">
+		<div class="w3-container w3-padding-small w3-gray opa7">
 		  <div class="w3-right" >
 			<div id="top_clock">13:35</div>
 		  </div>
 		</div>
 
-		<div class="w3-bar w3-orange w3-xlarge">
-		  <a class="w3-bar-item w3-button" href="javascript: linkToHomePage()"><i class="fa fa-bars"></i></a>
+		<div class="w3-bar w3-orange w3-xlarge opa7">
+		  <a class="w3-bar-item w3-button" href="javascript: linkToHomePage()"><i class="fa fa-plane"></i></a>
 		  <span  class="w3-bar-item">Choose your trip</span>
-		  <a class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-gray" href="javascript: linkToHomePage()"><i class="fa fa-search"></i></a>
+		  <a class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-gray" href="javascript: linkToHomePage()"><i class="fa fa-home"></i></a>
 		</div>
 
 		<div class="w3-bar w3-row">
@@ -32,7 +34,7 @@
 		  <div onclick="javascript:void(0)" class="w3-lime w3-button w3-hover-orange w3-quarter" >Egypt</div>
 		</div>
 		
-		<div class="w3-card w3-container w3-margin-top">
+		<div  id="choosingDiv" class="w3-card w3-container w3-margin-top">
 			<div class="w3-container  w3-green">
 				  <h1>Choose a city</h1>
 				</div>
@@ -40,27 +42,27 @@
 				<div class="w3-row-padding w3-margin-top">
 				
 					  <div class="w3-third ">
-						<div onclick="linkToForm('Rio de Janeiro')" class="w3-card-2 w3-button w3-hover-green">
-						  <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%">
-						  <div class="w3-container">
+						<div  onclick="linkToForm('Rio de Janeiro')" class="w3-card-2 w3-button w3-hover-green">
+						  <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%" alt="ni ma obrazka">
+						  <div class="w3-container w3-white">
 							<h5>Rio de Janeiro</h5>
 						  </div>
 						</div>
 					  </div>
 
 					  <div class="w3-third">
-						<div onclick="linkToForm('Monterosso')" class="w3-card-2 w3-button w3-hover-green">
-						  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%">
-						  <div class="w3-container">
+						<div  onclick="linkToForm('Monterosso')" class="w3-card-2 w3-button w3-hover-green">
+						  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%" alt="ni ma obrazka">
+						  <div class="w3-container w3-white">
 							<h5>Monterosso</h5>
 						  </div>
 						</div>
 					  </div>
 
 					  <div class="w3-third">
-						<div onclick="linkToForm('Vernazza')" class="w3-card-2 w3-button w3-hover-green">
-						  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%">
-						  <div class="w3-container">
+						<div  onclick="linkToForm('Vernazza')" class="w3-card-2 w3-button w3-hover-green">
+						  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%" alt="ni ma obrazka">
+						  <div class="w3-container w3-white">
 							<h5>Vernazza</h5>
 						  </div>
 						</div>
@@ -72,6 +74,79 @@
 		</div>
 		
 		
+		<div class="w3-card w3-container w3-margin-top">
+			<div id="galleryTitle" class="w3-container  w3-green">
+				  <h1>or visit our gallery</h1>
+				</div>
+
+				<div class="w3-row-padding w3-margin-top">
+				
+					  <div class="w3-third ">
+						<div  id="galleryRio"  class="w3-card-2 w3-button w3-hover-green">
+						  <img  src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%" alt="ni ma obrazka">
+						  <div class="w3-container w3-white">
+							<h5>Rio de Janeiro</h5>
+						  </div>
+						</div>
+					  </div>
+
+					  <div class="w3-third">
+						<div id="galleryMon"  class="w3-card-2 w3-button w3-hover-green">
+						  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%" alt="ni ma obrazka">
+						  <div class="w3-container w3-white">
+							<h5>Monterosso</h5>
+						  </div>
+						</div>
+					  </div>
+
+					  <div class="w3-third">
+						<div  id="galleryVer" class="w3-card-2 w3-button w3-hover-green">
+						  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Rio_De_Janeiro_-_Rafael_Defavari.jpg/700px-Rio_De_Janeiro_-_Rafael_Defavari.jpg" style="width:100%" alt="ni ma obrazka">
+						  <div class="w3-container w3-white">
+							<h5>Vernazza</h5>
+						  </div>
+						</div>
+					  </div>
+				  
+				</div>
+
+				
+		</div>
+		
+		<div  id="galleryRioDe" class="w3-content w3-display-container">
+		  <img class="mySlides0" src="https://www.w3schools.com/w3css/img_fjords.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides0" src="https://www.w3schools.com/w3css/img_lights.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides0" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides0" src="https://www.w3schools.com/w3css/img_forest.jpg" style="width:100%" alt="ni ma obrazka">
+			<div class="w3-display-topmiddle w3-container w3-white">Rio de Janeiro</div>
+		  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+		
+		<div  id="galleryMonte" class="w3-content w3-display-container">
+		  <img class="mySlides1" src="https://www.w3schools.com/w3css/img_fjords.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides1" src="https://www.w3schools.com/w3css/img_lights.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides1" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides1" src="https://www.w3schools.com/w3css/img_forest.jpg" style="width:100%" alt="ni ma obrazka">
+			<div class="w3-display-topmiddle w3-container w3-white">Monterosso</div>
+		  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+		
+		<div  id="galleryVerna" class="w3-content w3-display-container">
+		  <img class="mySlides2" src="https://www.w3schools.com/w3css/img_fjords.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides2" src="https://www.w3schools.com/w3css/img_lights.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides2" src="https://www.w3schools.com/w3css/img_mountains.jpg" style="width:100%" alt="ni ma obrazka">
+		  <img class="mySlides2" src="https://www.w3schools.com/w3css/img_forest.jpg" style="width:100%" alt="ni ma obrazka">
+			<div class="w3-display-topmiddle w3-container w3-white">Vernazza</div>
+		  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+		  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+		
+		<div class="w3-container w3-orange image w3-margin-top">
+		  <h5>Autor</h5>
+		  <p>&#x24B8 Paweł Jan Grabarczuk</p>
+		</div> 
 		
 	</body>
 
