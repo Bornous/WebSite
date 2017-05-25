@@ -100,25 +100,30 @@
 		var error = "";
 		var form = document.getElementById('clientForm');
 		if(form.firstname.value == ""){
-			error += "<br> name <br>";
+			error += "<br> First name <br>";
 			isEverythingGood = false;
 		}
 		
 		if(form.lastname.value == ""){
-			error += "surname <br>";
+			error += "Last name <br>";
 			isEverythingGood = false;
 		}
 		
 		if(form.email.value == ""){
-			error += "email <br>";
+			error += "Your e-mail <br>";
 			isEverythingGood = false;
 		}
 		
-		if( !isEverythingGood)		document.getElementById("errorLog").innerHTML="<div class='w3-red'> <br>Proszę uzupełnić następujące pola: \n"+error+"</div>";
+		if( !isEverythingGood)		document.getElementById("errorLog").innerHTML="<div class='w3-red w3-xxlarge w3-text-black'>Proszę uzupełnić następujące pola: \n"+error+"</div>";
 		else{
-			localStorage.Cname = form.firstname.value
-			document.getElementById("progres").innerHTML=' <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> ';
-			document.getElementById("testImie").innerHTML=localStorage.Cname;
+			//document.getElementById("progres").innerHTML=' <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> ';
+			localStorage.Cname = form.firstname.value;
+			localStorage.Csurname = form.lastname.value;
+			localStorage.Cemail = form.email.value;
+			localStorage.CstartDate = form.D1.value;
+			localStorage.CendDate = form.D2.value;
+			document.getElementById("errorLog").innerHTML="<div class='w3-green w3-xxlarge w3-text-black'>Your request has been send ! <br> More information will be send to your email. <br> But firstly check one last time your data: <br>  name is: \n"+localStorage.Cname+"<br>surname: \n"+localStorage.Csurname+"<br>email to contact with you: \n"+localStorage.Cemail+"<br>Your trip will begin: \n"+localStorage.CstartDate+"<br>and will end: \n"+localStorage.CendDate+"</div>";
+			document.getElementById("suButton").innerHTML="Change";
 		}
 	}
 	
