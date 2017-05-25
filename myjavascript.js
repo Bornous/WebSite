@@ -94,7 +94,7 @@
 	
 	
 	function submit(){
-		console.log("spin-yes");
+		localStorage.name = document.getElementsByTagName()
 		document.getElementById("progres").innerHTML=' <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> ';
 	}
 	

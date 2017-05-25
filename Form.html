@@ -4,6 +4,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>All you need</title>
 		<meta charset="utf-8">
+		<link href="arkuszStyli.css" rel="stylesheet"  type="text/css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,9 +12,9 @@
 		<script src="myjavascript.js"></script>
 		
 	</head>
-	<body  onload="whatTimeIsIt(); fullfillForm()" class="w3-gray" >
+	<body  onload="whatTimeIsIt(); fullfillForm()" class="w3-gray opa7" >
 
-		<div class="w3-container w3-padding-small w3-gray">
+		<div class="w3-container w3-padding-small w3-gray opa7">
 		  <div class="w3-right" >
 			<div id="top_clock">13:35</div>
 		  </div>
@@ -32,10 +33,10 @@
 		  <div onclick="javascript:void(0)" class="w3-lime w3-button w3-hover-orange w3-quarter" >Egypt</div>
 		</div>
 		
-		<div class="w3-card w3-container w3-margin-top image" >
+		<div class="w3-card w3-container w3-margin-top w3-white image  " >
 			<div id="destinationTown" >Tu powinno być wybrane miasto</div>
 			
-			 <form action="">
+			 <form action="" >
 				  First name:<br>
 				  <input type="text" name="firstname" value="Wpisz swoje imię..."><br>
 				  Last name:<br>
@@ -52,11 +53,15 @@
 					
 				  </select>
 				 <br><br>
-				  <div onclick="submit()" class="w3-half"><input type="submit" value="Submit" ></div>
+				  <div onclick="submit()" ><input type="submit" value="Submit" ></div><input type="reset" >
 			</form> 
-			<div id="progres" class="w3-half"></div>
+			<div id="progres" ></div>
 		</div>
 		
+		<div class="w3-container image w3-margin-top w3-orange">
+		  <h5>Autor</h5>
+		  <p>&#x24B8 Paweł Jan Grabarczuk</p>
+		</div> 
 		
 		
 	</body>
