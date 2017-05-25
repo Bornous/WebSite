@@ -93,10 +93,35 @@
 	}
 	
 	
-	function submit(){
-		localStorage.name = document.getElementsByTagName()
-		document.getElementById("progres").innerHTML=' <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> ';
+	function MYsubmit(){
+		document.getElementById("errorLog").innerHTML=" ";
+		
+		var isEverythingGood = true;
+		var error = "";
+		var form = document.getElementById('clientForm');
+		if(form.firstname.value == ""){
+			error += "<br> name <br>";
+			isEverythingGood = false;
+		}
+		
+		if(form.lastname.value == ""){
+			error += "surname <br>";
+			isEverythingGood = false;
+		}
+		
+		if(form.email.value == ""){
+			error += "email <br>";
+			isEverythingGood = false;
+		}
+		
+		if( !isEverythingGood)		document.getElementById("errorLog").innerHTML="<div class='w3-red'> <br>Proszę uzupełnić następujące pola: \n"+error+"</div>";
+		else{
+			localStorage.Cname = form.firstname.value
+			document.getElementById("progres").innerHTML=' <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p> ';
+			document.getElementById("testImie").innerHTML=localStorage.Cname;
+		}
 	}
+	
 	
 	
 	function linkToHomePage() {

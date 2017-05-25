@@ -36,26 +36,34 @@
 		<div class="w3-card w3-container w3-margin-top w3-white image  " >
 			<div id="destinationTown" >Tu powinno być wybrane miasto</div>
 			
-			 <form action="" >
+			<div class="w3-half">
+			
+			 <form action="Form.html" method="POST" id="clientForm" >
 				  First name:<br>
-				  <input type="text" name="firstname" value="Wpisz swoje imię..."><br>
+				  <input type="text" name="firstname" value="Wpisz swoje imię..." onfocus="this.value=''">
+				  <br>
 				  Last name:<br>
-				  <input type="text" name="lastname" value="Wpisz swoje nazwisko..."><br>
+				  <input type="text" name="lastname" value="Wpisz swoje nazwisko..." onfocus="this.value=''"><br>
 				  Your e-mail:<br>
-				  <input type="email" name="email" value="przykladowy@wp.pl">
+				  <input type="email" name="email" value="przykladowy@wp.pl" onfocus="this.value=''">
 				  <br><br>
 				  Choose when do you want to go:<br>
 				  <select name="D1"  id="Date1">
 						
 				  </select><br>
-				  And also choose when do you want to return (min. period is one week):<br>
+				  And also choose when do you want to return (a min. period is one week):<br>
 				  <select name="D2" id="Date2">
 					
 				  </select>
 				 <br><br>
-				  <div onclick="submit()" ><input type="submit" value="Submit" ></div><input type="reset" >
+				 <input type="reset" >
 			</form> 
+			 <div onclick="MYsubmit()" ><button class="w3-button w3-green">Submit</button></div>
 			<div id="progres" ></div>
+			
+			</div>
+			<div class="w3-half" id="errorLog"></div>
+			Imie to <div id="testImie"></div>
 		</div>
 		
 		<div class="w3-container image w3-margin-top w3-orange">
