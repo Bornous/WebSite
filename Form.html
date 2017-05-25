@@ -3,10 +3,11 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>All you need</title>
-		<meta charset="utf8">
+		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="myjavascript.js"></script>
 		
 	</head>
@@ -19,9 +20,9 @@
 		</div>
 
 		<div class="w3-bar w3-orange w3-xlarge">
-		  <a class="w3-bar-item w3-button" href="javascript: linkToHomePage()"><i class="fa fa-bars"></i></a>
+		  <a class="w3-bar-item w3-button" href="javascript: linkToHomePage()"><i class="fa fa-plane"></i></a>
 		  <span  class="w3-bar-item">Choose your trip</span>
-		  <a class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-gray" href="javascript: linkToHomePage()"><i class="fa fa-search"></i></a>
+		  <a class="w3-bar-item w3-button w3-right w3-hide-small w3-hover-gray" href="javascript: linkToHomePage()"><i class="fa fa-home"></i></a>
 		</div>
 
 		<div class="w3-bar w3-row">
@@ -31,7 +32,7 @@
 		  <div onclick="javascript:void(0)" class="w3-lime w3-button w3-hover-orange w3-quarter" >Egypt</div>
 		</div>
 		
-		<div class="w3-card w3-container w3-margin-top" >
+		<div class="w3-card w3-container w3-margin-top image" >
 			<div id="destinationTown" >Tu powinno być wybrane miasto</div>
 			
 			 <form action="">
@@ -51,9 +52,9 @@
 					
 				  </select>
 				 <br><br>
-				  <input type="submit" value="Submit">
+				  <div onclick="submit()" class="w3-half"><input type="submit" value="Submit" ></div>
 			</form> 
-				
+			<div id="progres" class="w3-half"></div>
 		</div>
 		
 		
